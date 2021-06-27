@@ -4,6 +4,9 @@ abstract class AuthEvent extends Equatable {
   const AuthEvent();
 
   @override
+  bool get stringify => true;
+
+  @override
   List<Object> get props => [];
 }
 

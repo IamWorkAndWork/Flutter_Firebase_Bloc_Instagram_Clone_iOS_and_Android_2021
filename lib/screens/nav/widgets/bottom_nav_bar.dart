@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram/enums/enums.dart';
 
@@ -7,12 +6,12 @@ class BottomNavBar extends StatelessWidget {
   final BottomNavItem selectedItem;
   final Function(int) onTap;
 
-  const BottomNavBar(
-      {Key key,
-      @required this.items,
-      @required this.selectedItem,
-      @required this.onTap})
-      : super(key: key);
+  const BottomNavBar({
+    Key key,
+    @required this.items,
+    @required this.selectedItem,
+    @required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,25 +24,16 @@ class BottomNavBar extends StatelessWidget {
       unselectedItemColor: Colors.grey,
       currentIndex: BottomNavItem.values.indexOf(selectedItem),
       onTap: onTap,
-      items: _buildItems(),
+      items: items
+          .map((item, icon) => MapEntry(
+                item.toString(),
+                BottomNavigationBarItem(
+                  label: '',
+                  icon: Icon(icon, size: 30.0),
+                ),
+              ))
+          .values
+          .toList(),
     );
-  }
-
-  _buildItems() {
-    return items
-        .map(
-          (key, icon) => MapEntry(
-            key.toString(),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(
-                icon,
-                size: 30.0,
-              ),
-            ),
-          ),
-        )
-        .values
-        .toList();
   }
 }

@@ -1,13 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8c339a4-19b2-439a-8ac7-b5354c2a83c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flutter_firebase_bloc-overview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/custom_router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cubits/cubits.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cubits/liked_posts/liked_posts_cubit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cubits/liked_posts/liked_posts_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/enums/bottom_nav_item.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/enums/notif_type.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/extensions/datetime_extension.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/extensions/extensions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/helpers/helpers.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/helpers/image_helper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/comment_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/notif_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/post_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/user_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/notification/base_notification_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/notification/notification_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/post/base_post_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/post/post_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/storage/base_storage_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/storage/storage_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/user/base_user_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/user/user_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/comments/bloc/comments_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/comments/bloc/comments_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/comments/bloc/comments_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/comments/comments_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/create_post/cubit/create_post_cubit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/create_post/cubit/create_post_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/edit_profile/cubit/edit_profile_cubit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/edit_profile/cubit/edit_profile_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/edit_profile/edit_profile_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/feed/bloc/feed_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/feed/bloc/feed_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/feed/bloc/feed_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/notifications/bloc/notifications_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/notifications/bloc/notifications_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/notifications/bloc/notifications_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/notifications/widgets/notification_tile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/notifications/widgets/widgets.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/bloc/profile_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/bloc/profile_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/bloc/profile_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/widgets/profile_button.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/widgets/profile_info.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/widgets/profile_stats.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/profile/widgets/widgets.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/search/cubit/search_cubit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/search/cubit/search_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/centered_text.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/post_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/user_profile_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/auth/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/auth/auth_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/auth/auth_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/auth/auth_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/auth/auth_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/auth/auth_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/blocs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/blocs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/simple_bloc_observer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/simple_bloc_observer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/custom_route.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/paths.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/paths.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/enums/button_nav_item.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/enums/enums.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/enums/enums.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/failure_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/failure_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/models.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/auth/auth_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/auth/auth_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/auth/base_auth_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/auth/base_auth_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositories/repositories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/repositories.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/create_post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/create_post/create_post_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/feed/feed_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/feed/feed_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login/cubit/login_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/cubit/login_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login/cubit/login_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/cubit/login_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/cubit/bottom_nav_bar_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/cubit/bottom_nav_bar_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/cubit/bottom_nav_bar_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/cubit/bottom_nav_bar_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/nav_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/nav_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/widgets/bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/widgets/bottom_nav_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/widgets/tab_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/widgets/tab_navigator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/nav/widgets/widgets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/nav/widgets/widgets.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/notifications/notifications_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/screens.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/screens.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/search/search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/search/search_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/signup/cubit/signup_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/signup/cubit/signup_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/signup/cubit/signup_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/signup/cubit/signup_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/signup/signup_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/splash/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/error_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/error_dialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/widgets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/widgets.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@192.168.1.46:5555]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sFeSGnW2qrDZlRLH99TLdE6MoM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/screens/feed/bloc" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="dev.polek.adbwifi.settings.AdbWifiConfigurable" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\Flutter\udemy\Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021\lib\screens\notifications\bloc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\Flutter\udemy\Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021\lib\screens\feed\bloc" />
+      <recent name="E:\Work\Flutter\udemy\Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021\lib\enums" />
+      <recent name="E:\Work\Flutter\udemy\Flutter_Firebase_Bloc_Instagram_Clone_iOS_and_Android_2021\lib\models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8c339a4-19b2-439a-8ac7-b5354c2a83c5" name="Default Changelist" comment="" />
+      <created>1620472763107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620472763107</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="200" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620474820886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="200" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1620474820886" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1624077238507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624077238507" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624687214633">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624687214633" />
+    <state x="96" y="100" width="1296" height="845" key="AVDManager" timestamp="1620474655318">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="96" y="100" width="1296" height="845" key="AVDManager/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1620474655318" />
+    <state x="557" y="268" key="AndroidProcessChooserDialog" timestamp="1624730051902">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="557" y="268" key="AndroidProcessChooserDialog/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624730051902" />
+    <state width="438" height="466" key="DebuggerActiveHint" timestamp="1624763530522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="438" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624763530522" />
+    <state x="523" y="261" key="FileChooserDialogImpl" timestamp="1624607975974">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="523" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624607975974" />
+    <state width="1877" height="246" key="GridCell.Tab.0.bottom" timestamp="1624764183925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="246" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624764183925" />
+    <state width="1877" height="246" key="GridCell.Tab.0.center" timestamp="1624764183925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="246" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624764183925" />
+    <state width="1877" height="246" key="GridCell.Tab.0.left" timestamp="1624764183925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="246" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624764183925" />
+    <state width="1877" height="246" key="GridCell.Tab.0.right" timestamp="1624764183925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="246" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624764183925" />
+    <state x="-1189" y="3" key="SettingsEditor" timestamp="1620479561084">
+      <screen x="-1366" y="3" width="1366" height="728" />
+    </state>
+    <state x="-1189" y="3" key="SettingsEditor/0.0.1920.1040/-1366.3.1366.728@-1366.3.1366.728" timestamp="1620479561084" />
+    <state x="249" y="166" key="SettingsEditor/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1620474776175" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1624729576712">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624729576712" />
+    <state x="666" y="253" width="935" height="653" key="find.popup" timestamp="1624730297890">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="253" width="935" height="653" key="find.popup/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624730297890" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1624511579400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624511579400" />
+    <state x="409" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1624728587113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="409" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1366.3.1366.728@0.0.1920.1040" timestamp="1624728587113" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/screens/splash/splash_screen.dart</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/screens/edit_profile/cubit/edit_profile_cubit.dart</url>
+          <line>78</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/screens/edit_profile/edit_profile_screen.dart</url>
+          <line>137</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/models/notif_model.dart</url>
+          <line>90</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint suspend="THREAD" type="dart-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

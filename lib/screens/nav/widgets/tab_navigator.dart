@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_instagram/blocs/blocs.dart';
+import 'package:flutter_instagram/config/custom_router.dart';
+import 'package:flutter_instagram/cubits/cubits.dart';
 import 'package:flutter_instagram/enums/enums.dart';
+import 'package:flutter_instagram/repositories/repositories.dart';
+import 'package:flutter_instagram/screens/create_post/cubit/create_post_cubit.dart';
+import 'package:flutter_instagram/screens/feed/bloc/feed_bloc.dart';
+import 'package:flutter_instagram/screens/notifications/bloc/notifications_bloc.dart';
+import 'package:flutter_instagram/screens/profile/bloc/profile_bloc.dart';
 import 'package:flutter_instagram/screens/screens.dart';
+import 'package:flutter_instagram/screens/search/cubit/search_cubit.dart';
 
 class TabNavigator extends StatelessWidget {
   static const String tabNavigatorRoot = '/';
+
   final GlobalKey<NavigatorState> navigatorKey;
   final BottomNavItem item;
 
@@ -20,7 +30,7 @@ class TabNavigator extends StatelessWidget {
     return Navigator(
       key: navigatorKey,
       initialRoute: tabNavigatorRoot,
-      onGenerateInitialRoutes: (navigator, initialRoute) {
+      onGenerateInitialRoutes: (_, initialRoute) {
         return [
           MaterialPageRoute(
             settings: RouteSettings(name: tabNavigatorRoot),
@@ -28,6 +38,7 @@ class TabNavigator extends StatelessWidget {
           )
         ];
       },
+      onGenerateRoute: CustomRouter.onGenerateNestedRoute,
     );
   }
 
@@ -35,18 +46,52 @@ class TabNavigator extends StatelessWidget {
     return {tabNavigatorRoot: (context) => _getScreen(context, item)};
   }
 
-  _getScreen(context, BottomNavItem item) {
+  Widget _getScreen(BuildContext context, BottomNavItem item) {
     switch (item) {
       case BottomNavItem.feed:
-        return FeedScreen();
+        return BlocProvider<FeedBloc>(
+          create: (context) => FeedBloc(
+            postRepository: context.read<PostRepository>(),
+            authBloc: context.read<AuthBloc>(),
+            likedPostsCubit: context.read<LikedPostsCubit>(),
+          )..add(FeedFetchPosts()),
+          child: FeedScreen(),
+        );
       case BottomNavItem.search:
-        return SearchScreen();
+        return BlocProvider<SearchCubit>(
+          create: (context) =>
+              SearchCubit(userRepository: context.read<UserRepository>()),
+          child: SearchScreen(),
+        );
       case BottomNavItem.create:
-        return CreatePostScreen();
+        return BlocProvider<CreatePostCubit>(
+          create: (context) => CreatePostCubit(
+            postRepository: context.read<PostRepository>(),
+            storageRepository: context.read<StorageRepository>(),
+            authBloc: context.read<AuthBloc>(),
+          ),
+          child: CreatePostScreen(),
+        );
       case BottomNavItem.notifications:
-        return NotificationsScreen();
+        return BlocProvider<NotificationsBloc>(
+          create: (context) => NotificationsBloc(
+            notificationRepository: context.read<NotificationRepository>(),
+            authBloc: context.read<AuthBloc>(),
+          ),
+          child: NotificationsScreen(),
+        );
       case BottomNavItem.profile:
-        return ProfileScreen();
+        return BlocProvider<ProfileBloc>(
+          create: (_) => ProfileBloc(
+            userRepository: context.read<UserRepository>(),
+            postRepository: context.read<PostRepository>(),
+            authBloc: context.read<AuthBloc>(),
+            likedPostsCubit: context.read<LikedPostsCubit>(),
+          )..add(
+              ProfileLoadUser(userId: context.read<AuthBloc>().state.user.uid),
+            ),
+          child: ProfileScreen(),
+        );
       default:
         return Scaffold();
     }

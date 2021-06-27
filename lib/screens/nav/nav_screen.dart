@@ -1,21 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_instagram/enums/enums.dart';
 import 'package:flutter_instagram/screens/nav/cubit/bottom_nav_bar_cubit.dart';
-import 'package:flutter_instagram/screens/nav/widgets/bottom_nav_bar.dart';
-import 'package:flutter_instagram/screens/nav/widgets/tab_navigator.dart';
+import 'package:flutter_instagram/screens/nav/widgets/widgets.dart';
 
 class NavScreen extends StatelessWidget {
-  static const String routeName = "/nav";
+  static const String routeName = '/nav';
 
   static Route route() {
     return PageRouteBuilder(
       settings: const RouteSettings(name: routeName),
       transitionDuration: const Duration(seconds: 0),
-      pageBuilder: (context, animation, secondaryAnimation) =>
-          BlocProvider<BottomNavBarCubit>(
-        create: (context) => BottomNavBarCubit(),
+      pageBuilder: (_, __, ___) => BlocProvider<BottomNavBarCubit>(
+        create: (_) => BottomNavBarCubit(),
         child: NavScreen(),
       ),
     );
@@ -42,40 +39,55 @@ class NavScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => false,
       child: BlocBuilder<BottomNavBarCubit, BottomNavBarState>(
-        builder: (context, state) => Scaffold(
-          body: Stack(
-            children: _buildItems(context, state),
-          ),
-          bottomNavigationBar: BottomNavBar(
-            items: items,
-            selectedItem: state.selectedItem,
-            onTap: (index) {
-              final selectedItem = BottomNavItem.values[index];
-              _selecBottomNavItem(
-                  context, selectedItem, selectedItem == state.selectedItem);
-            },
-          ),
-        ),
+        builder: (context, state) {
+          return Scaffold(
+            body: Stack(
+              children: items
+                  .map((item, _) => MapEntry(
+                        item,
+                        _buildOffstageNavigator(
+                          item,
+                          item == state.selectedItem,
+                        ),
+                      ))
+                  .values
+                  .toList(),
+            ),
+            bottomNavigationBar: BottomNavBar(
+              items: items,
+              selectedItem: state.selectedItem,
+              onTap: (index) {
+                final selectedItem = BottomNavItem.values[index];
+                _selectBottomNavItem(
+                  context,
+                  selectedItem,
+                  selectedItem == state.selectedItem,
+                );
+              },
+            ),
+          );
+        },
       ),
     );
   }
 
-  List<Widget> _buildItems(BuildContext context, BottomNavBarState state) {
-    return items
-        .map(
-          (key, value) => MapEntry(
-            key,
-            _buildOffStageNavigator(
-              key,
-              key == state.selectedItem,
-            ),
-          ),
-        )
-        .values
-        .toList();
+  void _selectBottomNavItem(
+    BuildContext context,
+    BottomNavItem selectedItem,
+    bool isSameItem,
+  ) {
+    if (isSameItem) {
+      navigatorKeys[selectedItem]
+          .currentState
+          .popUntil((route) => route.isFirst);
+    }
+    context.read<BottomNavBarCubit>().updateSelectedItem(selectedItem);
   }
 
-  Widget _buildOffStageNavigator(BottomNavItem currentItem, bool isSelected) {
+  Widget _buildOffstageNavigator(
+    BottomNavItem currentItem,
+    bool isSelected,
+  ) {
     return Offstage(
       offstage: !isSelected,
       child: TabNavigator(
@@ -83,15 +95,5 @@ class NavScreen extends StatelessWidget {
         item: currentItem,
       ),
     );
-  }
-
-  void _selecBottomNavItem(
-      BuildContext context, BottomNavItem selectedItem, bool isSameItem) {
-    if (isSameItem) {
-      navigatorKeys[selectedItem]
-          .currentState
-          .popUntil((route) => route.isFirst);
-    }
-    context.read<BottomNavBarCubit>().updateSelectedItem(selectedItem);
   }
 }

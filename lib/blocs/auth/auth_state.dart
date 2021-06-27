@@ -1,6 +1,6 @@
 part of 'auth_bloc.dart';
 
-enum AuthStatus { unknow, authenticated, unauthenticated }
+enum AuthStatus { unknown, authenticated, unauthenticated }
 
 class AuthState extends Equatable {
   final auth.User user;
@@ -8,21 +8,21 @@ class AuthState extends Equatable {
 
   const AuthState({
     this.user,
-    this.status = AuthStatus.unknow,
+    this.status = AuthStatus.unknown,
   });
 
-  factory AuthState.unknow() => const AuthState();
+  factory AuthState.unknown() => const AuthState();
 
-  factory AuthState.autheticated({@required auth.User user}) {
+  factory AuthState.authenticated({@required auth.User user}) {
     return AuthState(user: user, status: AuthStatus.authenticated);
   }
 
-  factory AuthState.unAuthenticated() =>
+  factory AuthState.unauthenticated() =>
       const AuthState(status: AuthStatus.unauthenticated);
 
   @override
   bool get stringify => true;
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [user, status];
 }

@@ -8,14 +8,14 @@ class LoginState extends Equatable {
   final LoginStatus status;
   final Failure failure;
 
+  bool get isFormValid => email.isNotEmpty && password.isNotEmpty;
+
   const LoginState({
     @required this.email,
     @required this.password,
     @required this.status,
     @required this.failure,
   });
-
-  bool get isFormValid => email.isNotEmpty && password.isNotEmpty;
 
   factory LoginState.initial() {
     return LoginState(

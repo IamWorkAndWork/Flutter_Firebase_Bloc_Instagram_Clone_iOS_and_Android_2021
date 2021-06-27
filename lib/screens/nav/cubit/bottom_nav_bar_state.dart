@@ -8,5 +8,3 @@ class BottomNavBarState extends Equatable {
   @override
   List<Object> get props => [selectedItem];
 }
-
-class BottomNavBarInitial extends BottomNavBarState {}

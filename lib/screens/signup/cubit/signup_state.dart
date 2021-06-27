@@ -9,6 +9,9 @@ class SignupState extends Equatable {
   final SignupStatus status;
   final Failure failure;
 
+  bool get isFormValid =>
+      username.isNotEmpty && email.isNotEmpty && password.isNotEmpty;
+
   const SignupState({
     @required this.username,
     @required this.email,
@@ -16,9 +19,6 @@ class SignupState extends Equatable {
     @required this.status,
     @required this.failure,
   });
-
-  bool get isFormValid =>
-      username.isNotEmpty && email.isNotEmpty && password.isNotEmpty;
 
   factory SignupState.initial() {
     return SignupState(
